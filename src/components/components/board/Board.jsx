@@ -22,13 +22,16 @@ const Board = (props) => {
 		<div className={css.board}>
 		{
 			Object.values(LIST_TYPES).map(type => {
-				const listTasks = tasks.filter(task => task.status === type)
+				let listTasks = []
+				if (tasks) {
+					listTasks = tasks.filter(task => task.status === type)
+				}
 				return (
 					<List
 						key={LIST_COPY[type]}
 						type={type}
 						title={LIST_COPY[type]}
-						tasks={listTasks || []}
+						tasks={listTasks}
 						addNewTask={addNewTask}
 					/>
 				)

@@ -19,11 +19,11 @@ function App() {
   return (
     <div className='wrapper'>
       <Router>
-        <Routes>
-          <Route exact path='/' element={<Board />} />
-          <Route path='/tasks/:taskId' element={<TaskDetail />} />
-        </Routes>
         <Header />
+        <Routes>
+          <Route exact path='/' element={<Board {...tasks} {...setTasks} />} />
+          <Route path='/tasks/:taskId' element={<TaskDetail {...tasks} {...setTasks} />} />
+        </Routes>
         <Footer tasks={tasks} />
       </Router>
     </div>
