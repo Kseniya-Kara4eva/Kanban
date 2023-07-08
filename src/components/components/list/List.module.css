@@ -12,22 +12,6 @@
 	margin-top: 0;
 }
 
-.task {
-	background: #465671;
-	color: #fff;
-	margin: 7px 0;
-	padding: 8px;
-	border-radius: 8px;
-}
-
-.task:hover {
-	text-decoration: underline;
-}
-
-.taskLink {
-	text-decoration: none;
-}
-
 .addButton {
 	background: none;
 	border: none;

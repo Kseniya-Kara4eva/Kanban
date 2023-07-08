@@ -7,7 +7,6 @@ import Board from './components/components/board/Board';
 import TaskDetail from '../src/components/components/task-detail/TaskDetail'
 
 
-
 function App() {
   const initialState = JSON.parse(window.localStorage.getItem('tasks')) || []
   const [tasks, setTasks] = useState(initialState)
@@ -21,8 +20,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route exact path='/' element={<Board {...tasks} {...setTasks} />} />
-          <Route path='/tasks/:taskId' element={<TaskDetail {...tasks} {...setTasks} />} />
+          <Route exact path='/' element={<Board tasks={tasks} setTasks={setTasks} />} />
+          <Route path='/tasks/:taskId' element={<TaskDetail tasks={tasks} setTasks={setTasks} />} />
         </Routes>
         <Footer tasks={tasks} />
       </Router>

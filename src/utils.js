@@ -3,4 +3,8 @@ const formatDate = (stringDate) => {
 	return date.toLocaleString('ru-RU')
 }
 
-export { formatDate }
+function classNamesArray(classes = []) {
+	return classes.join(" ");
+}
+
+export { formatDate, classNamesArray }
